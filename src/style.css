@@ -50,7 +50,7 @@ body {
   right: 0;
   width: 14px;
   height: 7px;
-  background: url('./assets/img/header-arrow.svg') no-repeat center;
+  background: url('./assets/images/header-arrow.svg') no-repeat center;
 }
 
 /* Стили для подменю */
@@ -150,7 +150,7 @@ body {
   right: 0;
   width: 14px;
   height: 7px;
-  background: url('./assets/img/header-arrow.svg') no-repeat center;
+  background: url('./assets/images/header-arrow.svg') no-repeat center;
 }
 
 /* Стили для подменю направлений */
@@ -272,7 +272,7 @@ body {
 
 .section-link--white .section-link-text {
   @apply 
-  bg-[url('./assets/img/section-link-arrow-light.svg')] 
+  bg-[url('./assets/images/section-link-arrow-light.svg')] 
   bg-right 
   bg-center 
   bg-no-repeat;
@@ -280,7 +280,7 @@ body {
 
 .section-link--dark .section-link-text {
   @apply 
-  bg-[url('./assets/img/section-link-arrow-dark.svg')] 
+  bg-[url('./assets/images/section-link-arrow-dark.svg')] 
   bg-right 
   bg-center 
   bg-no-repeat;
@@ -329,7 +329,7 @@ body {
   bottom-[10px] 
   right-0 
   w-[14px] 
-  h-[7px] bg-[url('./assets/img/header-arrow.svg')] 
+  h-[7px] bg-[url('./assets/images/header-arrow.svg')] 
   bg-no-repeat 
   bg-center;
 }
@@ -350,7 +350,7 @@ body {
 
 .header__button-call {
   @apply 
-  bg-[url('./assets/img/tel.svg')] 
+  bg-[url('./assets/images/tel.svg')] 
   bg-no-repeat 
   bg-center 
   w-[52px];
@@ -461,7 +461,7 @@ body {
   border-solid 
   border-white
   rounded-[13px] 
-  bg-[url('./assets/img/promo-card-link.svg')] 
+  bg-[url('./assets/images/promo-card-link.svg')] 
   bg-no-repeat 
   bg-center
   opacity-10 
@@ -490,7 +490,7 @@ body {
   top-0 
   left-0
   rotate-[-90deg]
-  bg-[url('./assets/img/promo-card1.gif')] 
+  bg-[url('./assets/images/promo-card1.gif')] 
   bg-no-repeat 
   bg-center 
   bg-size-[35%];
@@ -504,7 +504,7 @@ body {
   h-full 
   top-0 
   left-0
-  bg-[url('./assets/img/promo-card2.gif')] 
+  bg-[url('./assets/images/promo-card2.gif')] 
   bg-no-repeat 
   bg-center 
   bg-size-[32%];
@@ -640,7 +640,7 @@ body {
   right-[20px] 
   w-[15px] 
   h-[15px] 
-  bg-[url('./assets/img/questions-close.svg')] 
+  bg-[url('./assets/images/questions-close.svg')] 
   bg-no-repeat 
   bg-center 
   bg-cover
@@ -690,7 +690,7 @@ input[type="checkbox"]:required:invalid:focus + .custom-checkbox {
   h-full 
   top-0 
   left-0 
-  bg-[url('./assets/img/registration-arrow.svg')] 
+  bg-[url('./assets/images/registration-arrow.svg')] 
   bg-no-repeat 
   bg-center
   max-xl:bg-size-[80%];
