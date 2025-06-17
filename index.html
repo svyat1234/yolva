@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link href="/src/style.css" rel="stylesheet">
+        <script src="/src/main.js" type="module"></script>
+    </head>
+<body>
+  <main id="main">
+    <!-- HEADER -->
+     
+    <header id="navigation" class="header container h-[73px] mt-[20px] flex items-center justify-between relative z-[100]
+    max-[500px]:flex-col max-sm:h-[auto]
+    ">
+        <a href="/" class="header__logo w-[94px]
+        max-[500px]:w-[165px]
+        ">
+            <img class="w-full object-cover" src="assets/logo-Cucolrib.svg" alt="logo">
+        </a>
+
+        <nav class="header__nav flex items-center justify-between max-w-[870px] w-full
+        max-2xl:hidden
+        ">
+            <div class="directions">
+                <a href="#" class="header__nav-link header__nav-link--list">Направления</a>
+                <ul class="directions-sub">
+                    <li>
+                        <ul class="directions-sub-item">
+                            <li>
+                                <p>CRM</p>
+                            </li>
+                            <li>
+                                <a href="https://yolva-it.ru/bitrix24/">Платформа Битрикс24</a>
+                                <a href="https://dynamics365crm.yolva-it.ru/about-product/" style="margin-top: 20px;">Внедрение Dynamics365</a>
+                            </li>
+                            <li>
+                                <a href="https://yolva-it.ru/sistemnoe-administrirovanie-bitriks24/">Администрирование и поддержка Битрикс24</a>
+                                <a href="https://dynamics365crm.yolva-it.ru/podderzhka-dynamics-365-crm/">Поддержка и доработка <br> Dynamics365</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul class="directions-sub-item">
+                            <li>
+                                <p>DWH + BI</p>
+                            </li>
+                            <li>
+                                <a href="https://yolva-it.ru/datalens/">Yandex DataLens</a>
+                                <a href="https://yolva-it.ru/yandex-data-platform-na-baze-yandex-cloud/">Yandex Data Platform</a>
+                                <a href="https://yolva-it.ru/arenadata/">Arenadata</a>
+                            </li>
+                            <li>
+                                <a href="https://yolva-it.ru/visiology-analiticheskaja-platforma/">Visiology</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul class="directions-sub-item">
+                            <li>
+                                <p>Порталы</p>
+                            </li>
+                            <li>
+                                <a href="https://yolva-it.ru/korporativnye-portaly-na-baze-korobochnoj-versii-bitriks24/">Корпоративные порталы на Битрикс24</a>
+                            </li>
+                            <li>
+                                <a href="https://microsoft-power-platform.yolva-it.ru/about-powerapps/">Порталы и личный кабинет <br> Power Apps</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul class="directions-sub-item">
+                            <li>
+                                <p>low-code</p>
+                            </li>
+                            <li>
+                                <a href="https://microsoft-power-platform.yolva-it.ru/">Power Platform</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="industry-solutions">
+                <a href="#" class="header__nav-link header__nav-link--list">Отраслевые решения</a>
+                <ul class="industry-solutions__sub">
+                    <li><a href="https://yolva-it.ru/finansovyj-sektor/">Финансовый сектор</a></li>
+                    <li><a href="https://yolva-it.ru/reshenie-dlya-lizingovyh-kompanij/">Лизинговые компании</a></li>
+                    <li><a href="https://yolva-it.ru/it-reshenija-dlja-proizvodstva-i-distribucii/">Производство и дистрибуция</a></li>
+                    <li><a href="https://yolva-it.ru/it-reshenija-dlja-fmcg/">FMCG</a></li>
+                    <li><a href="https://yolva-it.ru/it-reshenija-dlja-sfery-obrazovanija/">Образование</a></li>
+                </ul>
+            </div>
+
+            <a href="/blog/" class="header__nav-link">Блог</a>
+            <a href="/tag/kejs/" class="header__nav-link">Проекты</a>
+            <a href="/webinars/" class="header__nav-link">Вебинапы</a>
+
+            <div class="company">
+                <a href="#" class="header__nav-link header__nav-link--list">О нас</a>
+                <ul class="company__sub">
+                    <li><a href="https://yolva-it.ru/about-company/">О компании</a></li>
+                    <li><a href="https://yolva-it.ru/contacts/">Контакты</a></li>
+                    <li><a href="https://yolva-it.ru/reviews/">Отзывы</a></li>
+                </ul>
+            </div>
+        </nav>
+        <!-- /.header__nav -->
+
+        <div class="header__actions flex items-center text-white gap-[60px]
+        max-2xl:gap-[30px]
+        max-sm:gap-[15px]
+        max-[500px]:mt-[30px]
+        ">
+            <div class="header__contacts flex items-center gap-[3px]">
+                <button class="header__button" data-modal-trigger>обсудить проект</button>
+                <button class="header__button header__button-call" data-modal-trigger></button>
+            </div>
+            <!-- /.header__contacts -->
+            <button class="header__search w-[20px] h-[21px] bg-[url(./assets/img/search.svg)] bg-no-repeat bg-center bg-cover cursor-pointer"></button>
+
+            <button class="header__burger w-[34px] h-[23px] bg-[url(./assets/img/burger.svg)] bg-no-repeat bg-center bg-cover cursor-pointer hidden
+            max-2xl:block
+            "></button>
+        </div>
+        <!-- /.header__actions -->
+
+        <div id="header-modal" class="absolute top-[73px] right-0 flex flex-col bg-white rounded-[19px] p-[15px] gap-[25px] max-w-[366px] w-full opacity-0 pointer-events-none transition-all duration-300">
+            <div class="flex flex-col gap-[5px]">
+
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center gap-[16px]">
+                        <div class="w-[40px] h-[40px] bg-[url('./assets/img/header-tel.svg')] bg-no-repeat bg-center bg-cover"></div>
+                        <a href="tel:+7-499-500-45-29" class="text-[18px] text-[#454545] font-[HelveticaNeueCyrBold] leading-[100%]">+7-499-500-45-29</a>
+                    </div>
+                    <button class="w-[19px] h-[18px] bg-[url('./assets/img/copy.svg')] bg-no-repeat bg-center bg-cover cursor-pointer"></button>
+                </div>
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center gap-[16px]">
+                        <div class="w-[40px] h-[40px] bg-[url('./assets/img/header-mail.svg')] bg-no-repeat bg-center bg-cover"></div>
+                        <a href="mailto:request@yolva-it.com" class="text-[18px] text-[#454545] font-[HelveticaNeueCyrBold] leading-[100%]">request@yolva-it.com</a>
+                    </div>
+                    <button class="w-[19px] h-[18px] bg-[url('./assets/img/copy.svg')] bg-no-repeat bg-center bg-cover cursor-pointer"></button>
+                </div>
+
+            </div>
+
+            <span class="text-[18px] text-[#454545] leading-[100%] max-w-[298px]">Московская область, Раменское, Карла Маркса, 5, оф.204</span>
+
+            <div class="flex items-center gap-[5px]">
+                <a href="https://t.me/yolvaitconsulting" class="w-[40px] h-[40px] bg-[url('./assets/img/header-telegram.svg')] bg-no-repeat bg-center bg-cover"></a>
+                <a href="https://vk.com/club211141014" class="w-[40px] h-[40px] bg-[url('./assets/img/header-vk.svg')] bg-no-repeat bg-center bg-cover"></a>
+                <a href="https://dzen.ru/yolvaitconsulting" class="w-[40px] h-[40px] bg-[url('./assets/img/header-dzen.svg')] bg-no-repeat bg-center bg-cover"></a>
+            </div>
+
+        </div>
+
+        
+        <div class="form-serch h-auto" id="form-serch">
+            <form action="https://yolva-it.ru">
+                <input type="text" placeholder="Что ищем?" name="s" value="" data-listener-added_8ef1a38b="true">
+                <input type="submit" placeholder="Поиск">
+            </form>
+        </div>
+        
+
+    </header>
+    <!-- /.header -->
+
+    <!-- MOBILE MENU -->
+
+    <div id="mobile-menu" class="absolute w-full py-[100px] bg-[#1C1C1C] z-[1000] opacity-0 pointer-events-none transition-opacity duration-300 left-0 top-0">
+        <div class="container relative">
+            <button class="mobile-menu__close w-[34px] h-[34px] bg-[url(./assets/img/close.svg)] bg-no-repeat bg-center bg-cover cursor-pointer absolute right-0 -top-[40px]"></button>
+            
+            <div class="flex items-start justify-between w-full mx-auto pt-[50px]
+            max-lg:max-w-full max-lg:flex-row max-lg:flex-wrap max-lg:gap-x-[40px] max-lg:gap-y-[40px] max-lg:justify-start
+            max-sm:flex-col max-md:gap-y-[40px]
+            ">
+                <div class="flex items-start flex-col
+                max-lg:min-w-[150px]
+                ">
+                    <h4 class="text-white text-[15px] leading-[100%]">Свяжитесь с нами</h4>
+                    <div class="flex items-start flex-col gap-[13px] mt-[25px]">
+                        <a href="https://yolva-it.ru/bitrix24/" class="footer-link">CRM -система на базе Битрикс24</a>
+                        <a href="https://dynamics365crm.yolva-it.ru/about-product/" class="footer-link">Внедрение Microsoft Dynamics 365</a>
+                        <a href="https://yolva-it.ru/sistemnoe-administrirovanie-bitriks24/" class="footer-link">Администрирование и поддержка Битрикс24</a>
+                        <a href="https://dynamics365crm.yolva-it.ru/podderzhka-dynamics-365-crm/" class="footer-link">Поддержка Microsoft Dynamics 365</a>
+                        <a href="https://yolva-it.ru/datalens/" class="footer-link">Yandex DataLens</a>
+                        <a href="https://yolva-it.ru/yandex-data-platform-na-baze-yandex-cloud/" class="footer-link">Yandex Data Platform</a>
+                        <a href="https://yolva-it.ru/arenadata/" class="footer-link">Arenadata</a>
+                        <a href="https://yolva-it.ru/visiology-analiticheskaja-platforma/" class="footer-link">Visiology</a>
+                        <a href="https://yolva-it.ru/korporativnye-portaly-na-baze-korobochnoj-versii-bitriks24/" class="footer-link">Корпоративные порталы на Битрикс24</a>
+                        <a href="https://microsoft-power-platform.yolva-it.ru/about-powerapps/" class="footer-link">Порталы и личный кабинет Power Apps</a>
+                        <a href="https://microsoft-power-platform.yolva-it.ru/" class="footer-link">Power Platform</a>                       
+                    </div>
+                </div>
+                <div class="flex items-start flex-col
+                max-lg:min-w-[150px]
+                ">
+                    <h4 class="text-white text-[15px] leading-[100%]">Отраслевые решения</h4>
+                    <div class="flex items-start flex-col gap-[13px] mt-[25px]">
+                        <a href="https://yolva-it.ru/finansovyj-sektor/" class="footer-link">Финансовый сектор</a>
+                        <a href="https://yolva-it.ru/reshenie-dlya-lizingovyh-kompanij/" class="footer-link">Лизинговые компании</a>
+                        <a href="https://yolva-it.ru/it-reshenija-dlja-proizvodstva-i-distribucii/" class="footer-link">Производство и дистрибуция</a>
+                        <a href="https://yolva-it.ru/it-reshenija-dlja-fmcg/" class="footer-link">FMCG</a>
+                        <a href="https://yolva-it.ru/it-reshenija-dlja-sfery-obrazovanija/" class="footer-link">Образование</a>
+                    </div>
+                </div>
+                <div class="flex items-start flex-col
+                max-lg:min-w-[150px]
+                ">
+                    <h4 class="text-white text-[15px] leading-[100%]">Блог</h4>
+                    <div class="flex items-start flex-col gap-[13px] mt-[25px]">
+                        <a href="https://yolva-it.ru/tag/kejs/" class="footer-link">Кейсы</a>
+                        <a href="https://yolva-it.ru/webinars/" class="footer-link">Анонсы вебинаров</a>
+                        <a href="https://yolva-it.ru/tag/vebinar/" class="footer-link">Видеоархив вебинаров</a>
+                        <a href="https://yolva-it.ru/blog/" class="footer-link">Новости</a>
+                    </div>
+                </div>
+                <div class="flex items-start flex-col
+                max-lg:min-w-[150px]
+                ">
+                    <h4 class="text-white text-[15px] leading-[100%]">Компания</h4>
+                    <div class="flex items-start flex-col gap-[13px] mt-[25px]">
+                        <a href="https://yolva-it.ru/about-company/" class="footer-link">О компании</a>
+                        <a href="https://yolva-it.ru/contacts/" class="footer-link">Контакты</a>
+                        <a href="https://yolva-it.ru/reviews/" class="footer-link">Отзывы</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /.mobile-menu -->
+
+    <!-- PROMO -->
+
+    <section class="promo relative -mt-[113px] pb-[120px] pt-[210px] text-white z-10 bg-[url(/images/promo.png)]
+    max-[500px]:-mt-[173px] max-[500px]:pt-[230px]
+    lg:pt-[180px]
+    ">
+        <!-- <div class="promo-bg relative w-full h-full">
+            <div class="w-full h-full relative">
+                <video class="absolute inset-0 w-full h-full object-cover" autoplay muted loop playsinline>
+                    <source src="assets/promo-bg-BvAArfs9.mp4" type="video/mp4">
+                </video>
+                <div class="promo-bg__overlay absolute inset-0 bg-[#43DCA6] "></div>
+            </div>
+        </div> -->
+        <div class="container">
+            <div class="flex justify-between items-stretch gap-x-[20px] 
+            max-lg:flex-col
+            ">
+                <div class="flex flex-col max-w-[900px] w-full">
+                    <h1 class="font-[HelveticaNeueCyrBold] text-[90px] font-bold leading-[100%] 
+                    max-xl:text-[70px] max-lg:order-1 max-lg:mt-[30px]
+                    max-sm:text-[48px]
+                    ">
+                    Комплексные цифровые решения для лизинга:</h1>
+                    <div class="breadcrumbs mt-[226px] 
+                    max-lg:mt-[0] 
+                    ">
+                        <a href="/" class="breadcrumbs__item">Главная</a> /
+                        <a href="#" class="breadcrumbs__item">Отраслевые решения</a> /
+                        <span class="breadcrumbs__item breadcrumbs__item--active">Лизинговые компании</span>
+                    </div>
+                </div>
+                <div class="flex flex-col justify-between">
+                    <span class="text-[30px] leading-[100%] max-w-[580px] w-full mt-[20px]
+                    max-lg:mt-[50px]
+                    ">Интеграция 1С, CRM и специализированных модулей</span>
+                    <div class="max-w-[580px] w-full
+                    max-lg:mt-[50px]
+                    "> 
+                        <button class="rounded-[100px] h-[50px] flex items-center px-[36px] text-[#000] text-[19px] bg-[#fff] cursor-pointer">
+                            <span class="pr-[36px] bg-[url('./assets/img/promo-arrow.svg')] bg-no-repeat bg-right">обсудить проект</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- /.promo -->
+
+  </main>
+</body>
+</html>
