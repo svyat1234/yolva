@@ -613,6 +613,49 @@ body {
   text-[#7F7F7F]
 }
 
+/* STAGES */
+
+.stages-card {
+  @apply
+  bg-transparent
+  relative
+}
+
+.stages-card--active {
+  @apply
+  bg-[#1C1C1C]
+}
+
+.stages-dot {
+  @apply
+  rounded-[50%]
+  bg-[rgba(255,255,255,0.3)]
+  -translate-x-1/2
+  absolute;
+  width: 14px;
+  height: 14px;
+  left: 50%;
+  top: calc(70px - (28px/2));
+}
+
+.stages-dot--active {
+  width: 28px;
+  height: 28px;
+  z-index: 20;
+}
+
+
+.stages-dot--active::after {
+  position: absolute;
+  content: '';
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  width: 14px;
+  height: 14px;
+  background: #43DCA6;
+}
 
 /* INTEGRATION */
 
