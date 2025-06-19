@@ -9,6 +9,7 @@
     </head>
 <body>
   <main id="main">
+    
     <!-- HEADER -->
      
     <header id="navigation" class="header container h-[73px] mt-[20px] flex items-center justify-between relative z-[100]
@@ -118,9 +119,9 @@
                 <button class="header__button header__button-call" data-modal-trigger></button>
             </div>
             <!-- /.header__contacts -->
-            <button class="header__search w-[20px] h-[21px] bg-[url(./assets/images/search.svg)] bg-no-repeat bg-center bg-cover cursor-pointer"></button>
+            <button class="header__search w-[20px] h-[21px] bg-[url('./assets/images/search.svg')] bg-no-repeat bg-center bg-cover cursor-pointer"></button>
 
-            <button class="header__burger w-[34px] h-[23px] bg-[url(./assets/images/burger.svg)] bg-no-repeat bg-center bg-cover cursor-pointer hidden
+            <button class="header__burger w-[34px] h-[23px] bg-[url('./assets/images/burger.svg')] bg-no-repeat bg-center bg-cover cursor-pointer hidden
             max-2xl:block
             "></button>
         </div>
@@ -172,7 +173,7 @@
 
     <div id="mobile-menu" class="absolute w-full py-[100px] bg-[#1C1C1C] z-[1000] opacity-0 pointer-events-none transition-opacity duration-300 left-0 top-0">
         <div class="container relative">
-            <button class="mobile-menu__close w-[34px] h-[34px] bg-[url(./assets/images/close.svg)] bg-no-repeat bg-center bg-cover cursor-pointer absolute right-0 -top-[40px]"></button>
+            <button class="mobile-menu__close w-[34px] h-[34px] bg-[url('./assets/images/close.svg)] bg-no-repeat bg-center bg-cover cursor-pointer absolute right-0 -top-[40px]"></button>
             
             <div class="flex items-start justify-between w-full mx-auto pt-[50px]
             max-lg:max-w-full max-lg:flex-row max-lg:flex-wrap max-lg:gap-x-[40px] max-lg:gap-y-[40px] max-lg:justify-start
@@ -236,7 +237,7 @@
 
     <!-- PROMO -->
 
-    <section class="promo relative -mt-[113px] pb-[120px] pt-[210px] text-white z-10 bg-[url(./assets/images/promo.png)]
+    <section class="promo relative -mt-[113px] pb-[120px] pt-[210px] text-white z-10 bg-[url('./assets/images/promo.png')]
     max-[500px]:-mt-[173px] max-[500px]:pt-[230px]
     lg:pt-[180px]
     ">
@@ -284,9 +285,13 @@
     </section>
     <!-- /.promo -->
 
+    <!-- SUPPORT -->
+
     <section class="support bg-white py-[110px] rounded-[50px]">
         <div class="container">
-            <div class="flex justify-between">
+            <div class="flex justify-between
+            max-lg:flex-col
+            ">
                 <div>
                     <h2 class="font-[Helvetica] text-[70px] font-normal leading-[100%] max-md:text-[50px]">Техподдержка ПО</h2>
                     <span class="text-[18px] text-[#7F7F7F] mt-[40px] flex mb-[55px]">Битрикс24, Microsoft Dynamics365, Visiology, YandexCloud</span>
@@ -296,26 +301,39 @@
                         <span class="section-link-text pr-[31px]">Оставить запрос</span>
                     </a>
                 </div>
-                <div class="flex gap-[9px]">
-                    <a href="#" class="flex justify-center items-center h-[115px] w-[115px] rounded-[40px] bg-[#FBFBFB]">
+                <div class="flex gap-[9px]
+                max-lg:mt-[50px]
+                ">
+                    <a href="#" class="flex justify-center items-center w-[115px] h-[115px] rounded-[40px] bg-[#FBFBFB]
+                    max-md:w-[23%] 
+                    ">
                         <img class="object-contain max-w-[95px] max-h-[70px]" src="./src/assets/images/support-icon-1.png" alt="">
                     </a>
-                    <a href="#" class="flex justify-center items-center h-[115px] w-[115px] rounded-[40px] bg-[#FBFBFB]">
+                    <a href="#" class="flex justify-center items-center w-[115px] h-[115px] rounded-[40px] bg-[#FBFBFB]
+                    max-md:w-[23%]
+                    ">
                         <img class="object-contain max-w-[95px] max-h-[70px]" src="./src/assets/images/support-icon-2.png" alt="">
                     </a>
-                    <a href="#" class="flex justify-center items-center h-[115px] w-[115px] rounded-[40px] bg-[#FBFBFB]">
+                    <a href="#" class="flex justify-center items-center w-[115px] h-[115px] rounded-[40px] bg-[#FBFBFB]
+                    max-md:w-[23%]
+                    ">
                         <img class="object-contain max-w-[95px] max-h-[70px]" src="./src/assets/images/support-icon-3.png" alt="">
                     </a>
-                    <a href="#" class="flex justify-center items-center h-[115px] w-[115px] rounded-[40px] bg-[#FBFBFB]">
+                    <a href="#" class="flex justify-center items-center w-[115px] h-[115px] rounded-[40px] bg-[#FBFBFB]
+                    max-md:w-[23%]
+                    ">
                         <img class="object-contain max-w-[95px] max-h-[70px]" src="./src/assets/images/support-icon-4.png" alt="">
                     </a>
                 </div>
             </div>
 
-            <div class="grid grid-cols-3 gap-[15px] mt-[85px]">
+            <div class="grid grid-cols-3 gap-[15px] mt-[85px]
+            max-lg:grid-cols-2
+            max-md:grid-cols-1
+            ">
 
                 <div class="rounded-[30px] bg-[#FBFBFB] p-[30px]">
-                    <div class="flex justify-between max-w-[421px] w-full">
+                    <div class="flex justify-between max-w-[421px] w-full gap-[15px]">
                         <span class="rounded-[18px] flex justify-center items-center text-[#DFDFDF] h-[57px] w-[60px] border border-[#DFDFDF]">01</span>
                         <div>
                             <h3 class="text-[30px] max-w-[280px] leading-[100%]">Гарантийная поддержка</h3>
@@ -324,7 +342,7 @@
                     </div>
                 </div>
                 <div class="rounded-[30px] bg-[#FBFBFB] p-[30px]">
-                    <div class="flex justify-between max-w-[421px] w-full">
+                    <div class="flex justify-between max-w-[421px] w-full gap-[15px]">
                         <span class="rounded-[18px] flex justify-center items-center text-[#DFDFDF] h-[57px] w-[60px] border border-[#DFDFDF]">02</span>
                         <div>
                             <h3 class="text-[30px] max-w-[280px] leading-[100%]">Работа по инцидентам</h3>
@@ -333,7 +351,7 @@
                     </div>
                 </div>
                 <div class="rounded-[30px] bg-[#FBFBFB] p-[30px]">
-                    <div class="flex justify-between max-w-[421px] w-full">
+                    <div class="flex justify-between max-w-[421px] w-full gap-[15px]">
                         <span class="rounded-[18px] flex justify-center items-center text-[#DFDFDF] h-[57px] w-[60px] border border-[#DFDFDF]">03</span>
                         <div>
                             <h3 class="text-[30px] max-w-[280px] leading-[100%]">Аудит</h3>
@@ -342,7 +360,7 @@
                     </div>
                 </div>
                 <div class="rounded-[30px] bg-[#FBFBFB] p-[30px]">
-                    <div class="flex justify-between max-w-[421px] w-full">
+                    <div class="flex justify-between max-w-[421px] w-full gap-[15px]">
                         <span class="rounded-[18px] flex justify-center items-center text-[#DFDFDF] h-[57px] w-[60px] border border-[#DFDFDF]">04</span>
                         <div>
                             <h3 class="text-[30px] max-w-[280px] leading-[100%]">Гарантийная поддержка</h3>
@@ -351,7 +369,7 @@
                     </div>
                 </div>
                 <div class="rounded-[30px] bg-[#FBFBFB] p-[30px]">
-                    <div class="flex justify-between max-w-[421px] w-full">
+                    <div class="flex justify-between max-w-[421px] w-full gap-[15px]">
                         <span class="rounded-[18px] flex justify-center items-center text-[#DFDFDF] h-[57px] w-[60px] border border-[#DFDFDF]">05</span>
                         <div>
                             <h3 class="text-[30px] max-w-[280px] leading-[100%]">Работа по инцидентам</h3>
@@ -360,7 +378,7 @@
                     </div>
                 </div>
                 <div class="rounded-[30px] bg-[#FBFBFB] p-[30px]">
-                    <div class="flex justify-between max-w-[421px] w-full">
+                    <div class="flex justify-between max-w-[421px] w-full gap-[15px]">
                         <span class="rounded-[18px] flex justify-center items-center text-[#DFDFDF] h-[57px] w-[60px] border border-[#DFDFDF]">06</span>
                         <div>
                             <h3 class="text-[30px] max-w-[280px] leading-[100%]">Аудит</h3>
@@ -374,6 +392,8 @@
         </div>
     </section>
     <!-- /.support -->
+
+    <!-- INTEGRATION -->
 
     <section id="call-center" class="integration container mt-[120px]">
         <div class="flex items-end justify-between
@@ -412,6 +432,8 @@
         </div>
     </section>
     <!-- /.integration -->
+
+    <!-- STAGES -->
 
     <section class="stages container mt-[150px]">
         <h2 class="font-[Helvetica] text-[#ffffff] text-[70px] font-normal leading-[100%] max-md:text-[50px]">Как ведется работа?</h2>
@@ -464,18 +486,63 @@
                 <p class="max-w-[416px] text-[18px] text-[#7F7F7F] leading-[100%]">Пользовательский интерфейс лизингового калькулятора создан с учетом особенностей типовых действий сотрудников лизинговой компании, поэтому он интуитивно понятен.</p>
                 <div class="stages-dot"></div>
             </div>
-            <div class="border border-[#5A5A5A] h-[87%] absolute top-[70px] left-1/2 -translate-x-[0.5px] z-10"></div>
+            <div class="stages-line border border-[#5A5A5A] h-[85%] absolute top-[70px] left-1/2 -translate-x-[0.9px] z-10"></div>
         </div>
     </section>
     <!-- /.stages -->
+
+    <!-- SLA -->
+
+    <section class="sla bg-white py-[120px] rounded-[50px]">
+        <div class="container flex items-center justify-between gap-[15px]
+        max-lg:flex-col max-lg:items-start max-lg:gap-y-[50px]
+        ">
+            <div class="flex flex-col gap-[68px] max-w-[659px]">
+                <h2 class="font-[Helvetica] text-[#2F2F2F] text-[70px] font-normal max-md:text-[50px] leading-[100%]">SLA для проектов на базе Битрикс</h2>
+                <p class="text-[#7F7F7F] text-[18px] leading-[100%]">Для повышение стабильности работы вашего проекта на тарифах с абонементом мы предлагаем добавить опцию SLA (соглашение об уровне предоставления услуги). </p>
+            </div>
+            <div class="grid grid-cols-1 max-w-[778px] w-full gap-[15px]">
+                <div class="flex items-center justify-between p-[30px] rounded-[30px] bg-[#FBFBFB] gap-[10px]">
+                    <div class="w-[73px] h-[70px] bg-white rounded-[20px] bg-[url('./assets/images/star.svg')] bg-no-repeat bg-center" style="background-size: 50%;"></div>
+                    <h3 class="text-[#2F2F2F] text-[30px] leading-[100%]">Время работы 10*5, 12*7 или 24*7</h3>
+                </div>
+                <div class="flex items-center justify-between p-[30px] rounded-[30px] bg-[#FBFBFB] gap-[10px]">
+                    <div class="w-[73px] h-[70px] bg-white rounded-[20px] bg-[url('./assets/images/star.svg')] bg-no-repeat bg-center" style="background-size: 50%;"></div>
+                    <h3 class="text-[#2F2F2F] text-[30px] leading-[100%]">Время работы 10*5, 12*7 или 24*7</h3>
+                </div>
+            </div>
+        </div>
+        <!-- /.container -->
+    </section>
+    <!-- /.sla -->
+
+    <!-- FIRMS -->
+
+    <section class="firms container my-[140px]">
+        <div class="grid grid-cols-3 gap-[15px]
+        max-lg:grid-cols-1
+        ">
+            <a href="#" class="firms-card flex items-center cursor-pointer rounded-[30px] h-[180px] bg-[#1C1C1C]">
+                <div class="firms-img"></div>
+            </a>
+            <a href="#" class="firms-card flex items-center cursor-pointer rounded-[30px] h-[180px] bg-[#1C1C1C]">
+                <div class="firms-img"></div>
+            </a>
+            <a href="#" class="firms-card flex items-center cursor-pointer rounded-[30px] h-[180px] bg-[#1C1C1C]">
+                <div class="firms-img"></div>
+            </a>
+        </div>
+    </section>
+    <!-- /.firms -->
 
 
     <!-- CASES -->
 
     <section id="cases" class="cases bg-[#FBFBFB] py-[120px] rounded-[50px]">
         <div class="container">
-            <h2 class="font-[Helvetica] text-[#2F2F2F] text-[70px] font-normal max-md:text-[50px]">Кейсы</h2>
-            <div class="grid grid-cols-2 gap-[15px]
+            <h2 class="font-[Helvetica] text-[#2F2F2F] text-[70px] font-normal max-md:text-[50px]">Наши проекты</h2>
+            <p class="text-[#ADADAD] text-[18px] max-w-[616px] leading-[100%]">Наш богатый опыт работы с зарубежными и российскими платформами, помогает решать задачи CRM и BI быстро и эффективно</p>
+            <div class="grid grid-cols-2 gap-[15px] mt-[50px]
             max-lg:grid max-lg:grid-cols-1
             ">
                 <a href="#" class="pt-[11px] border-t-[1px] border-[#D9D9D9] flex items-start justify-between gap-x-[30px]
@@ -484,7 +551,10 @@
                     <div class="flex items-start justify-between max-w-[350px] w-full mt-[30px]
                     max-sm:max-w-full
                     ">
-                        <h3 class="text-[30px] text-[#454545] leading-[100%] max-w-[164px]">Лизинговая компания сэп → crm"</h3>
+                        <div class="flex flex-col gap-[25px]">
+                            <h3 class="text-[30px] text-[#454545] leading-[100%] max-w-[164px]">Алютех</h3>
+                            <p class="text-[#ADADAD] text-[18px] leading-[100%]">Разработка системы отслеживания жизненного цикла обращений и возможности мониторинга статуса запросов</p>
+                        </div>
                         <div class="text-[#D9D9D9] text-[20px]">01</div>
                     </div>
                     <div class="h-[383px] max-w-[383px] min-w-[383px] rounded-[20px] overflow-hidden
@@ -493,7 +563,7 @@
                     max-lg:min-w-[320px] max-lg:h-[320px]
                     max-sm:mt-[40px]
                     ">
-                            <img class="w-full h-full object-cover" src="assets/cases-card1-Deyjuz0E.png" alt="">
+                            <img class="w-full h-full object-cover" src="./src/assets/images/cases-01.png" alt="">
                     </div>
                 </a>
                 <a href="#" class="pt-[11px] border-t-[1px] border-[#D9D9D9] flex items-start justify-between gap-x-[30px]
@@ -502,7 +572,10 @@
                     <div class="flex items-start justify-between max-w-[350px] w-full mt-[30px]
                     max-sm:max-w-full
                     ">
-                        <h2 class="text-[30px] text-[#454545] leading-[100%] max-w-[164px]">Лизинговая компания сэп → crm"</h2>
+                        <div class="flex flex-col gap-[25px]">
+                            <h3 class="text-[30px] text-[#454545] leading-[100%] max-w-[164px]">Mareven</h3>
+                            <p class="text-[#ADADAD] text-[18px] leading-[100%]">Перенос привычной логики работы сотрудников из SAP CRM в Битрикс24.</p>
+                        </div>
                         <div class="text-[#D9D9D9] text-[20px]">02</div>
                     </div>
                     <div class="h-[383px] max-w-[383px] min-w-[383px] rounded-[20px] overflow-hidden
@@ -511,7 +584,7 @@
                     max-lg:min-w-[320px] max-lg:h-[320px]
                     max-sm:mt-[40px]
                     ">
-                            <img class="w-full h-full object-cover" src="assets/cases-card2-DYkLZ2jZ.png" alt="">
+                            <img class="w-full h-full object-cover" src="./src/assets/images/cases-02.png" alt="">
                     </div>
                 </a>
                 <a href="#" class="pt-[11px] border-t-[1px] border-[#D9D9D9] flex items-start justify-between gap-x-[30px]
@@ -520,7 +593,10 @@
                     <div class="flex items-start justify-between max-w-[350px] w-full mt-[30px]
                     max-sm:max-w-full
                     ">
-                        <h2 class="text-[30px] text-[#454545] leading-[100%] max-w-[164px]">Лизинговая компания сэп → crm"</h2>
+                        <div class="flex flex-col gap-[25px]">
+                            <h3 class="text-[30px] text-[#454545] leading-[100%] max-w-[164px]">ВШЭ</h3>
+                            <p class="text-[#ADADAD] text-[18px] leading-[100%]">Внедрение CRM Битрикс24 помогла более качественно взаимодействоватьс абитуриентами</p>
+                        </div>
                         <div class="text-[#D9D9D9] text-[20px]">03</div>
                     </div>
                     <div class="h-[383px] max-w-[383px] min-w-[383px] rounded-[20px] overflow-hidden
@@ -529,7 +605,7 @@
                     max-lg:min-w-[320px] max-lg:h-[320px]
                     max-sm:mt-[40px]
                     ">
-                            <img class="w-full h-full object-cover" src="assets/cases-card3-BBZ0FCYg.png" alt="">
+                            <img class="w-full h-full object-cover" src="./src/assets/images/cases-03.png" alt="">
                     </div>
                 </a>
                 <a href="#" class="pt-[11px] border-t-[1px] border-[#D9D9D9] flex items-start justify-between gap-x-[30px]
@@ -538,7 +614,10 @@
                     <div class="flex items-start justify-between max-w-[350px] w-full mt-[30px]
                     max-sm:max-w-full
                     ">
-                        <h2 class="text-[30px] text-[#454545] leading-[100%] max-w-[164px]">Лизинговая компания сэп → crm"</h2>
+                        <div class="flex flex-col gap-[25px]">
+                            <h3 class="text-[30px] text-[#454545] leading-[100%] max-w-[164px]">Ингосстрах</h3>
+                            <p class="text-[#ADADAD] text-[18px] leading-[100%]">Разработка двух независимых CRM-систем для юридических и физических лиц</p>
+                        </div>
                         <div class="text-[#D9D9D9] text-[20px]">04</div>
                     </div>
                     <div class="h-[383px] max-w-[383px] min-w-[383px] rounded-[20px] overflow-hidden
@@ -547,7 +626,7 @@
                     max-lg:min-w-[320px] max-lg:h-[320px]
                     max-sm:mt-[40px]
                     ">
-                            <img class="w-full h-full object-cover" src="assets/cases-card4-BwVWtYzv.png" alt="">
+                            <img class="w-full h-full object-cover" src="./src/assets/images/cases-04.png" alt="">
                     </div>
                 </a>
             </div>
@@ -658,7 +737,7 @@
                     <label for="agreement" class="text-[13px] text-[#535353] leading-[113%] cursor-pointer max-w-[614px]">Нажимая кнопку «Зарегистрироваться», я даю свое согласие на обработку моих персональных данных, в соответствии с Федеральным законом от 27.07.2006 года No152-ФЗ «О персональных данных», на условиях и для целей, определенных в Согласии на обработку персональных данных*</label>
                 </div>
                 <button class="w-full h-[53px] flex items-center justify-center rounded-[30px] border-[1px] border-[#5F5F5F] text-[#5F5F5F] text-[22px] mt-[30px] cursor-pointer">
-                    <span class="pr-[36px] bg-[url(./assets/images/form-arrow.svg')] bg-no-repeat bg-right">зарегистрироваться</span>
+                    <span class="pr-[36px] bg-[url('./assets/images/form-arrow.svg')] bg-no-repeat bg-right">зарегистрироваться</span>
                 </button>
             </div>
         </form>
@@ -684,7 +763,7 @@
                 <div class="flex flex-col">
                     <div class="flex flex-col">
                         <a href="/" class="w-[183px]">
-                            <img class="w-full object-cover" src="assets/logo-Cucolrib.svg" alt="">
+                            <img class="w-full object-cover" src="./src/assets/images/logo.svg" alt="">
                         </a>
                         <span class="text-[#ADADAD] text-[10px] leading-[100%] mt-[30px]">2016-2025 OOO «Ёлва» (ООО Yolva)</span>
                         <span class="text-[#ADADAD] text-[10px] leading-[150%] max-w-[191px] mt-[10px]">Аккредитованный разработчик ПО, лицензия №4588345535</span>
@@ -694,21 +773,21 @@
                     max-sm:flex-col
                     ">
                         <div class="flex items-center gap-[16px]">
-                            <div class="w-[45px] h-[45px] bg-[url(./assets/images/footer-icon1.svg')] bg-no-repeat bg-cover"></div>
+                            <div class="w-[45px] h-[45px] bg-[url('./assets/images/footer-icon1.svg')] bg-no-repeat bg-cover"></div>
                             <div class="flex flex-col gap-[8px]">
                                 <h4 class="text-white text-[10px] leading-[100%]">Битрикс24</h4>
                                 <span class="text-[#ADADAD] text-[10px] leading-[100%]">Золотой партнер</span>
                             </div>
                         </div>
                         <div class="flex items-center gap-[16px]">
-                            <div class="w-[45px] h-[45px] bg-[url(./assets/images/footer-icon2.svg')] bg-no-repeat bg-cover"></div>
+                            <div class="w-[45px] h-[45px] bg-[url('./assets/images/footer-icon2.svg')] bg-no-repeat bg-cover"></div>
                             <div class="flex flex-col gap-[8px]">
                                 <h4 class="text-white text-[10px] leading-[100%]">Крупные внедрения</h4>
                                 <span class="text-[#ADADAD] text-[10px] leading-[100%]">Компетенция</span>
                             </div>
                         </div>
                         <div class="flex items-center gap-[16px]">
-                            <div class="w-[45px] h-[45px] bg-[url(./assets/images/footer-icon3.svg')] bg-no-repeat bg-cover"></div>
+                            <div class="w-[45px] h-[45px] bg-[url('./assets/images/footer-icon3.svg')] bg-no-repeat bg-cover"></div>
                             <div class="flex flex-col gap-[8px]">
                                 <h4 class="text-white text-[10px] leading-[100%]">IT-Компания</h4>
                                 <span class="text-[#ADADAD] text-[10px] leading-[100%]">Аккредитована Минцифры России</span>
@@ -788,9 +867,9 @@
                         ">request@yolva-it.com</a>
                     </div>
                     <div class="flex gap-[10px]">
-                        <a href="https://vk.com/club211141014" class="w-[34px] h-[34px] bg-[url(./assets/images/vk.svg')] bg-no-repeat bg-cover"></a>                       
-                        <a href="https://t.me/yolvaitconsulting" class="w-[34px] h-[34px] bg-[url(./assets/images/telegram.svg')] bg-no-repeat bg-cover"></a>
-                        <a href="https://dzen.ru/yolvaitconsulting" class="w-[34px] h-[34px] bg-[url(./assets/images/header-dzen.svg')] bg-no-repeat bg-cover"></a>
+                        <a href="https://vk.com/club211141014" class="w-[34px] h-[34px] bg-[url('./assets/images/vk.svg')] bg-no-repeat bg-cover"></a>                       
+                        <a href="https://t.me/yolvaitconsulting" class="w-[34px] h-[34px] bg-[url('./assets/images/telegram.svg')] bg-no-repeat bg-cover"></a>
+                        <a href="https://dzen.ru/yolvaitconsulting" class="w-[34px] h-[34px] bg-[url('./assets/images/header-dzen.svg')] bg-no-repeat bg-cover"></a>
                     </div>
                 </div>
             </div>

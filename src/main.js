@@ -3,6 +3,30 @@ import './style.css'
 // import viteLogo from '/vite.svg'
 // import { setupCounter } from './counter.js'
 
+function initStages() {
+    const stages = document.querySelectorAll('.stages-card')
+    const stagesDots = document.querySelectorAll('.stages-dot')
+
+    stages.forEach((stage, index) => {
+        stage.addEventListener('mouseenter', () => {
+            stages.forEach(stage => {
+                stage.classList.remove('stages-card--active')
+            })
+            stagesDots.forEach(dot => {
+                dot.classList.remove('stages-dot--active')
+            })
+            stage.classList.add('stages-card--active')
+            stagesDots[index].classList.add('stages-dot--active')
+        })
+        stage.addEventListener('mouseleave', () => {
+            stage.classList.remove('stages-card--active')
+            stagesDots[index].classList.remove('stages-dot--active')
+            stages[0].classList.add('stages-card--active')
+            stagesDots[0].classList.add('stages-dot--active')
+        })
+    })
+}
+
 function initAnimatedCards(selector, contentSelector, activeClass, padding) {
     const cards = document.querySelectorAll(selector);
     
@@ -130,6 +154,7 @@ function toggleSearchForm() {
   });
 }
 
+initStages()
 initContactsModal()
 smoothScroll()
 toggleSearchForm()

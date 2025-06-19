@@ -67,7 +67,7 @@ body {
   left: -23px;
   padding: 15px 23px;
   width: 602px;
-  background: rgba(15, 47, 35, 0.8);
+  background: rgba(15, 26, 47, 0.8);
   backdrop-filter: blur(20px);
   border-radius: 20px;
   opacity: 0;
@@ -163,7 +163,7 @@ body {
   left: -23px;
   padding: 15px 23px;
   width: 602px;
-  background: rgba(15, 47, 35, 0.8);
+  background: rgba(15, 26, 47, 0.8);
   backdrop-filter: blur(20px);
   border-radius: 20px;
   margin-top: 10px;
@@ -619,6 +619,10 @@ body {
   @apply
   bg-transparent
   relative
+  h-[172px]
+  cursor-pointer
+  transition-all
+  duration-300
 }
 
 .stages-card--active {
@@ -629,32 +633,89 @@ body {
 .stages-dot {
   @apply
   rounded-[50%]
-  bg-[rgba(255,255,255,0.3)]
+  bg-[#5C5C5C]
   -translate-x-1/2
+  transition-all
+  duration-300
   absolute;
   width: 14px;
   height: 14px;
   left: 50%;
   top: calc(70px - (28px/2));
-}
-
-.stages-dot--active {
-  width: 28px;
-  height: 28px;
   z-index: 20;
 }
 
+.stages-line {
+  height: calc(100% - (30px * 6));
+}
 
-.stages-dot--active::after {
+.stages-dot::after {
   position: absolute;
   content: '';
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   border-radius: 50%;
-  width: 14px;
-  height: 14px;
+  width: 7px;
+  height: 7px;
   background: #43DCA6;
+  opacity: 0;
+}
+
+.stages-dot--active {
+  @apply
+  bg-[rgba(255,255,255,0.3)];
+  transform: scale(1.7);
+  z-index: 20;
+  opacity: 1;
+}
+
+
+.stages-dot--active::after {
+  opacity: 1;
+}
+
+/* FIRMS */
+
+.firms-img {
+  height: 56px;
+  width: 100%;
+  opacity: 0.3;
+  transition: all 0.1s ease-in-out;
+}
+
+.firms-card:nth-child(1) .firms-img {
+  background: url('./assets/images/b24-big.png') no-repeat center;
+  background-size: auto 100%;
+}
+.firms-card:nth-child(2) .firms-img {
+  background: url('./assets/images/microsoft-gold.png') no-repeat center;
+  background-size: auto 100%;
+}
+.firms-card:nth-child(3) .firms-img {
+  background: url('./assets/images/b24-version.png') no-repeat center;
+  background-size: auto 100%;
+}
+/* hover */
+
+.firms-card:hover .firms-img {
+  transition: all 0.1s ease-in-out;
+}
+
+.firms-card:nth-child(1):hover .firms-img {
+  background: url('./assets/images/b24-big-active.png') no-repeat center;
+  background-size: auto 100%;
+  opacity: 1;
+}
+.firms-card:nth-child(2):hover .firms-img {
+  background: url('./assets/images/microsoft-gold-active.png') no-repeat center;
+  background-size: auto 100%;
+  opacity: 1;
+}
+.firms-card:nth-child(3):hover .firms-img {
+  background: url('./assets/images/b24-version-active.png') no-repeat center;
+  background-size: auto 100%;
+  opacity: 1;
 }
 
 /* INTEGRATION */
@@ -756,7 +817,7 @@ input[type="checkbox"]:required:invalid:focus + .custom-checkbox {
 .company__sub {
   display: none;
   position: absolute;
-  background: rgba(15, 47, 35, 0.8);
+  background: rgba(15, 26, 47, 0.8);
   backdrop-filter: blur(20px);
   border-radius: 20px;
   z-index: 50;
@@ -852,7 +913,7 @@ input[type="checkbox"]:required:invalid:focus + .custom-checkbox {
 
 .form-serch {
   display: none;
-  background: rgba(15, 47, 35, 0.8);
+  background: rgba(15, 26, 47, 0.8);
   backdrop-filter: blur(20px);
   border: 1px solid rgba(255, 255, 255, 0.1);
   position: absolute;
