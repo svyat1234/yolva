@@ -23,7 +23,7 @@
 
 body {
   @apply 
-  font-[HelveticaNeueCyr] 
+  font-[HelveticaNeueCyr]
   bg-[#171717];
 }
 
@@ -46,7 +46,7 @@ body {
 .header__nav-link--list::after {
   content: '';
   position: absolute;
-  bottom: 10px;
+  bottom: 7px;
   right: 0;
   width: 14px;
   height: 7px;
@@ -143,15 +143,6 @@ body {
   padding-right: 22px;
 }
 
-.header__nav-link--list::after {
-  content: '';
-  position: absolute;
-  bottom: 10px;
-  right: 0;
-  width: 14px;
-  height: 7px;
-  background: url('./assets/images/header-arrow.svg') no-repeat center;
-}
 
 /* Стили для подменю направлений */
 .directions-sub {
@@ -320,18 +311,6 @@ body {
 
 .header__nav-link--list {
   @apply pr-[22px] relative;
-}
-
-.header__nav-link--list::after {
-  @apply 
-  content-[''] 
-  absolute 
-  bottom-[10px] 
-  right-0 
-  w-[14px] 
-  h-[7px] bg-[url('./assets/images/header-arrow.svg')] 
-  bg-no-repeat 
-  bg-center;
 }
 
 .header__button {
@@ -623,6 +602,9 @@ body {
   cursor-pointer
   transition-all
   duration-300
+
+  max-lg:h-auto
+  max-lg:bg-[#1C1C1C];
 }
 
 .stages-card--active {
@@ -632,6 +614,7 @@ body {
 
 .stages-dot {
   @apply
+  max-lg:hidden
   rounded-[50%]
   bg-[#5C5C5C]
   -translate-x-1/2
@@ -681,7 +664,7 @@ body {
   height: 56px;
   width: 100%;
   opacity: 0.3;
-  transition: all 0.1s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
 .firms-card:nth-child(1) .firms-img {
@@ -699,7 +682,7 @@ body {
 /* hover */
 
 .firms-card:hover .firms-img {
-  transition: all 0.1s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
 .firms-card:nth-child(1):hover .firms-img {
@@ -781,6 +764,16 @@ input[type="checkbox"]:required:invalid:focus + .custom-checkbox {
   shadow-[0_0_0_2px_rgba(239,68,68,0.2)];
 }
 
+.registration-title {
+  font-size: min(4vw, 75px);
+}
+
+@media (max-width: 1024px) {
+  .registration-title {
+    font-size: min(7vw, 75px);
+  }
+}
+
 .registration-arrow {
   @apply 
   relative;
@@ -797,7 +790,7 @@ input[type="checkbox"]:required:invalid:focus + .custom-checkbox {
   bg-[url('./assets/images/registration-arrow.svg')] 
   bg-no-repeat 
   bg-center
-  max-xl:bg-size-[80%];
+  max-2xl:bg-size-[80%];
   mix-blend-mode: overlay;
 }
 
@@ -954,4 +947,3 @@ input[type="checkbox"]:required:invalid:focus + .custom-checkbox {
   background: 0 0;
   border: none;
 }
-

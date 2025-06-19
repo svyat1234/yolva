@@ -18,12 +18,6 @@ function initStages() {
             stage.classList.add('stages-card--active')
             stagesDots[index].classList.add('stages-dot--active')
         })
-        stage.addEventListener('mouseleave', () => {
-            stage.classList.remove('stages-card--active')
-            stagesDots[index].classList.remove('stages-dot--active')
-            stages[0].classList.add('stages-card--active')
-            stagesDots[0].classList.add('stages-dot--active')
-        })
     })
 }
 
@@ -160,3 +154,21 @@ smoothScroll()
 toggleSearchForm()
 initAnimatedCards('.conveyor-card', '.conveyor-list', 'conveyor-card--active', 20);
 initAnimatedCards('.questions-card', '.questions-card > div:not(.questions-close)', 'questions-card--open', 60);
+
+// document.addEventListener('mousemove', function(event) {
+// //   console.log('Расстояние от курсора до верха видимой области окна:', event.clientY);
+//     const stagesCards = document.querySelectorAll('.stages-card');
+//     const stagesDots = document.querySelectorAll('.stages-dot');
+//     stagesCards.forEach((card, index) => {
+//         if ((card.getBoundingClientRect().top + window.scrollY) <= event.pageY) {
+//             stagesCards.forEach(card => { 
+//                 card.classList.remove('stages-card--active')
+//             })
+//             card.classList.add('stages-card--active')
+//             stagesDots.forEach(dot => {
+//                 dot.classList.remove('stages-dot--active')
+//             })
+//             stagesDots[index].classList.add('stages-dot--active')
+//         } 
+//     });
+// });
