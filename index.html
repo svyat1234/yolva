@@ -115,7 +115,7 @@
         max-[500px]:mt-[30px]
         ">
             <div class="header__contacts flex items-center gap-[3px]">
-                <button class="header__button" data-modal-trigger>обсудить проект</button>
+                <button class="header__button" data-modal="modal_1">обсудить проект</button>
                 <button class="header__button header__button-call" data-modal-trigger></button>
             </div>
             <!-- /.header__contacts -->
@@ -173,7 +173,7 @@
 
     <div id="mobile-menu" class="absolute w-full py-[100px] bg-[#1C1C1C] z-[1000] opacity-0 pointer-events-none transition-opacity duration-300 left-0 top-0">
         <div class="container relative">
-            <button class="mobile-menu__close w-[34px] h-[34px] bg-[url('./assets/images/close.svg)] bg-no-repeat bg-center bg-cover cursor-pointer absolute right-0 -top-[40px]"></button>
+            <button class="mobile-menu__close w-[34px] h-[34px] bg-[url('./assets/images/close.svg')] bg-no-repeat bg-center bg-cover cursor-pointer absolute right-0 -top-[40px]"></button>
             
             <div class="flex items-start justify-between w-full mx-auto pt-[50px]
             max-lg:max-w-full max-lg:flex-row max-lg:flex-wrap max-lg:gap-x-[40px] max-lg:gap-y-[40px] max-lg:justify-start
@@ -237,7 +237,7 @@
 
     <!-- PROMO -->
 
-    <section class="promo relative -mt-[113px] pb-[120px] pt-[210px] text-white z-10
+    <section id="first-section" class="promo relative -mt-[113px] pb-[170px] pt-[210px] text-white z-10
     max-[500px]:-mt-[173px] max-[500px]:pt-[230px]
     lg:pt-[180px]
     ">
@@ -287,7 +287,7 @@
 
     <!-- SUPPORT -->
 
-    <section class="support bg-white py-[110px] rounded-[50px]
+    <section id="support" class="support bg-[#FBFBFB] py-[110px] rounded-[50px] mt-[-50px] z-20 relative
     max-lg:py-[50px] max-lg:rounded-[30px]
     ">
         <div class="container">
@@ -306,22 +306,22 @@
                 <div class="flex gap-[9px]
                 max-lg:mt-[50px]
                 ">
-                    <a href="#" class="flex justify-center items-center w-[115px] h-[115px] rounded-[40px] bg-[#FBFBFB]
+                    <a href="#" class="support-icon flex justify-center items-center w-[115px] h-[115px] rounded-[40px] bg-white
                     max-md:w-[23%] 
                     ">
                         <img class="object-contain max-w-[95px] max-h-[70px]" src="./src/assets/images/support-icon-1.png" alt="">
                     </a>
-                    <a href="#" class="flex justify-center items-center w-[115px] h-[115px] rounded-[40px] bg-[#FBFBFB]
+                    <a href="#" class="support-icon flex justify-center items-center w-[115px] h-[115px] rounded-[40px] bg-white
                     max-md:w-[23%]
                     ">
                         <img class="object-contain max-w-[95px] max-h-[70px]" src="./src/assets/images/support-icon-2.png" alt="">
                     </a>
-                    <a href="#" class="flex justify-center items-center w-[115px] h-[115px] rounded-[40px] bg-[#FBFBFB]
+                    <a href="#" class="support-icon flex justify-center items-center w-[115px] h-[115px] rounded-[40px] bg-white
                     max-md:w-[23%]
                     ">
                         <img class="object-contain max-w-[95px] max-h-[70px]" src="./src/assets/images/support-icon-3.png" alt="">
                     </a>
-                    <a href="#" class="flex justify-center items-center w-[115px] h-[115px] rounded-[40px] bg-[#FBFBFB]
+                    <a href="#" class="support-icon flex justify-center items-center w-[115px] h-[115px] rounded-[40px] bg-white
                     max-md:w-[23%]
                     ">
                         <img class="object-contain max-w-[95px] max-h-[70px]" src="./src/assets/images/support-icon-4.png" alt="">
@@ -334,7 +334,7 @@
             max-md:grid-cols-1
             ">
 
-                <div class="rounded-[30px] bg-[#FBFBFB] p-[30px]">
+                <div class="rounded-[30px] bg-white p-[30px]">
                     <div class="flex justify-between max-w-[421px] w-full gap-[15px]">
                         <span class="rounded-[18px] flex justify-center items-center text-[#DFDFDF] h-[57px] w-[60px] border border-[#DFDFDF]">01</span>
                         <div>
@@ -343,7 +343,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="rounded-[30px] bg-[#FBFBFB] p-[30px]">
+                <div class="rounded-[30px] bg-white p-[30px]">
                     <div class="flex justify-between max-w-[421px] w-full gap-[15px]">
                         <span class="rounded-[18px] flex justify-center items-center text-[#DFDFDF] h-[57px] w-[60px] border border-[#DFDFDF]">02</span>
                         <div>
@@ -352,7 +352,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="rounded-[30px] bg-[#FBFBFB] p-[30px]">
+                <div class="rounded-[30px] bg-white p-[30px]">
                     <div class="flex justify-between max-w-[421px] w-full gap-[15px]">
                         <span class="rounded-[18px] flex justify-center items-center text-[#DFDFDF] h-[57px] w-[60px] border border-[#DFDFDF]">03</span>
                         <div>
@@ -361,7 +361,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="rounded-[30px] bg-[#FBFBFB] p-[30px]">
+                <div class="rounded-[30px] bg-white p-[30px]">
                     <div class="flex justify-between max-w-[421px] w-full gap-[15px]">
                         <span class="rounded-[18px] flex justify-center items-center text-[#DFDFDF] h-[57px] w-[60px] border border-[#DFDFDF]">04</span>
                         <div>
@@ -370,7 +370,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="rounded-[30px] bg-[#FBFBFB] p-[30px]">
+                <div class="rounded-[30px] bg-white p-[30px]">
                     <div class="flex justify-between max-w-[421px] w-full gap-[15px]">
                         <span class="rounded-[18px] flex justify-center items-center text-[#DFDFDF] h-[57px] w-[60px] border border-[#DFDFDF]">05</span>
                         <div>
@@ -379,7 +379,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="rounded-[30px] bg-[#FBFBFB] p-[30px]">
+                <div class="rounded-[30px] bg-white p-[30px]">
                     <div class="flex justify-between max-w-[421px] w-full gap-[15px]">
                         <span class="rounded-[18px] flex justify-center items-center text-[#DFDFDF] h-[57px] w-[60px] border border-[#DFDFDF]">06</span>
                         <div>
@@ -397,7 +397,7 @@
 
     <!-- INTEGRATION -->
 
-    <section id="call-center" class="integration container mt-[120px]">
+    <section id="advantages" class="integration container mt-[120px]">
         <div class="flex items-end justify-between
         max-lg:flex-col max-lg:items-start max-lg:justify-start
         ">
@@ -437,7 +437,7 @@
 
     <!-- STAGES -->
 
-    <section class="stages container mt-[150px]">
+    <section id="stages" class="stages container mt-[150px]">
         <h2 class="font-[Helvetica] text-[#ffffff] text-[70px] font-normal leading-[100%] max-md:text-[50px]">Как ведется работа?</h2>
         <div class="grid grid-cols-1 gap-[30px] mt-[60px] relative">
             <div class="stages-card stages-card--active flex justify-between p-[50px] rounded-[30px]
@@ -525,7 +525,7 @@
 
     <!-- SLA -->
 
-    <section class="sla bg-white py-[120px] rounded-[50px] mt-[140px] 
+    <section id="sla" class="sla bg-[#FBFBFB] py-[120px] rounded-[50px] mt-[140px] 
     max-lg:py-[50px] max-lg:rounded-[30px]
     ">
         <div class="container flex items-center justify-between gap-[15px]
@@ -536,11 +536,11 @@
                 <p class="text-[#7F7F7F] text-[18px] leading-[100%]">Для повышение стабильности работы вашего проекта на тарифах с абонементом мы предлагаем добавить опцию SLA (соглашение об уровне предоставления услуги). </p>
             </div>
             <div class="grid grid-cols-1 max-w-[778px] w-full gap-[15px]">
-                <div class="flex items-center justify-between p-[30px] rounded-[30px] bg-[#FBFBFB] gap-[10px]">
+                <div class="flex items-center justify-between p-[30px] rounded-[30px] bg-white gap-[10px]">
                     <div class="w-[73px] h-[70px] bg-white rounded-[20px] bg-[url('./assets/images/star.svg')] bg-no-repeat bg-center" style="background-size: 50%;"></div>
                     <h3 class="text-[#2F2F2F] text-[30px] leading-[100%]">Время работы 10*5, 12*7 или 24*7</h3>
                 </div>
-                <div class="flex items-center justify-between p-[30px] rounded-[30px] bg-[#FBFBFB] gap-[10px]">
+                <div class="flex items-center justify-between p-[30px] rounded-[30px] bg-white gap-[10px]">
                     <div class="w-[73px] h-[70px] bg-white rounded-[20px] bg-[url('./assets/images/star.svg')] bg-no-repeat bg-center" style="background-size: 50%;"></div>
                     <h3 class="text-[#2F2F2F] text-[30px] leading-[100%]">Время работы 10*5, 12*7 или 24*7</h3>
                 </div>
@@ -552,7 +552,7 @@
 
     <!-- FIRMS -->
 
-    <section class="firms container my-[140px]">
+    <section id="firms" class="firms container my-[140px]">
         <div class="grid grid-cols-3 gap-[15px]
         max-lg:grid-cols-1
         ">
@@ -797,7 +797,7 @@
 
     <!-- FOOTER -->
     <footer class="footer mt-[215px] pt-[130px] pb-[100px] relative">
-        <div class="promo-bg relative w-full h-full scale-y-[-1]">
+        <div class="promo-bg relative w-full h-full scale-y-[-1]" style="height: 99%">
             <div class="w-full h-full relative">
                 <video class="absolute inset-0 w-full h-full object-cover" autoplay muted loop playsinline>
                     <source src="./src/assets/images/video-bg.mp4" type="video/mp4">
@@ -933,6 +933,48 @@
         </div>
     </footer>
     <!-- /.footer   -->
+
+    <div id="scroll-navigation" class="bg-white p-[15px] flex flex-col max-w-[366px] w-full rounded-[19px] fixed top-[50%] left-[70px] -translate-y-1/2 z-[1000] hidden">
+        <a href="#first-section" class="navigation-link hidden">
+            <span class="font-[HelveticaNeueCyrBold] font-bold">01.</span>
+            <span class="">Первая секция</span>
+        </a>
+        <a href="#support" class="navigation-link hidden">
+            <span class="font-[HelveticaNeueCyrBold] font-bold">02.</span>
+            <span class="">Техподдержка ПО</span>
+        </a>
+        <a href="#advantages" class="navigation-link hidden">
+            <span class="font-[HelveticaNeueCyrBold] font-bold">03.</span>
+            <span class="">Преимущества</span>
+        </a>
+        <a href="#stages" class="navigation-link hidden">
+            <span class="font-[HelveticaNeueCyrBold] font-bold">04.</span>
+            <span class="">Как ведется работа?</span>
+        </a>
+        <a href="#sla" class="navigation-link hidden">
+            <span class="font-[HelveticaNeueCyrBold] font-bold">05.</span>
+            <span class="">SLA</span>
+        </a>
+        <a href="#firms" class="navigation-link hidden">
+            <span class="font-[HelveticaNeueCyrBold] font-bold">06.</span>
+            <span class="">Корпоративные клиенты</span>
+        </a>
+        <a href="#cases" class="navigation-link">
+            <span class="font-[HelveticaNeueCyrBold] font-bold">02.</span>
+            <span class="">Кейсы</span>
+        </a>
+        <a href="#questions" class="navigation-link">
+            <span class="font-[HelveticaNeueCyrBold] font-bold">09.</span>
+            <span class="">Вопрос - ответ</span>
+        </a>
+        <a href="#request" class="navigation-link">
+            <span class="font-[HelveticaNeueCyrBold] font-bold">10.</span>
+            <span class="">Заявка</span>
+        </a>
+    </div>
+
+    <!-- NAVIGATION DOTS -->
+    <div id="nav-dots"></div>
 
   </main>
 </body>

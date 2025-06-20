@@ -489,6 +489,19 @@ body {
   bg-size-[32%];
 }
 
+/* SUPPORT */
+
+.support-icon {
+  transition: all 0.2s linear;
+  cursor: pointer;
+}
+
+.support-icon:hover {
+  width: 130px;
+  height: 130px;
+  transition: all 0.2s linear;
+}
+
 /* Common card styles */
 .questions-card {
   margin-top: 40px;
@@ -765,7 +778,7 @@ input[type="checkbox"]:required:invalid:focus + .custom-checkbox {
 }
 
 .registration-title {
-  font-size: min(4vw, 75px);
+  font-size: min(3.8vw, 75px);
 }
 
 @media (max-width: 1024px) {
@@ -946,4 +959,281 @@ input[type="checkbox"]:required:invalid:focus + .custom-checkbox {
   padding: 2px 15px;
   background: 0 0;
   border: none;
+}
+
+
+
+#analytics .overflow-hidden > img,
+#calculator .overflow-hidden > video {
+	max-width: 101%;
+}
+
+/* Modal pop up */
+
+/* transition */
+.btn, .closer, .overlay { -webkit-transition: all 0.2s; transition: all 0.2s; }
+
+/*--- CONTENT ---*/
+
+.overlay { opacity: 0; visibility: hidden; position:fixed; left: 0; right: 0; top: 0; bottom: 0; z-index: 5555; background: rgba(0,0,0,0.87); }
+.dlg-modal { width: 100%; max-width: 570px; height: auto; opacity: 0; visibility: hidden; text-align: left; position: fixed; left: 50%; z-index: 55555; padding: 20px 10px; background: #1c1c1c; border-radius: 10px; -webkit-box-shadow: 0 0 20px rgba(0,0,0,0.85); box-shadow: 0 0 20px rgba(0,0,0,0.85); }
+.dlg-modal h3 {color: #fff; opacity: 0.5; font-size: 1.5rem; margin: 5px; text-align: center;}
+.dlg-modal-fade { top: 50%; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); }
+.dlg-modal-slide { top: -20px; -webkit-transform: translate(-50%, -100%); transform: translate(-50%, -100%); visibility: visible; opacity: 1; }
+
+.closer { width: 40px; height: 40px; display: block; position: absolute; right: 10px; top: 10px; background: url('cross.png') no-repeat; cursor: pointer; }
+.closer:hover { -webkit-transform: rotate(90deg); transform: rotate(90deg); }
+
+/* animation */
+.fadeIn, .fadeOut, .slideInDown, .slideOutUp { -webkit-animation-duration: 0.4s; animation-duration: 0.4s; -webkit-animation-timing-function: linear; animation-timing-function: linear; }
+
+@keyframes fadeIn { 
+	from { opacity: 0; visibility: hidden; }
+	to { opacity:1; visibility: visible; }
+}
+.fadeIn { -webkit-animation-name: fadeIn; animation-name: fadeIn; opacity: 1; visibility: visible; }
+
+@keyframes fadeOut { 
+	from { opacity: 1; visibility: visible; }
+	to { opacity:0; visibility: hidden; }
+}
+.fadeOut { -webkit-animation-name: fadeOut; animation-name: fadeOut; opacity: 0; visibility: hidden; }
+
+@keyframes slideInDown { 
+	from { top: -20px; -webkit-transform: translate(-50%, -100%); transform: translate(-50%, -100%); }
+	to { top: 50%; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); }
+}
+.slideInDown { -webkit-animation-name: slideInDown; animation-name: slideInDown; top: 50%; transform: translate(-50%, -50%); visibility:visible; opacity: 1}
+
+@keyframes slideOutUp { 
+	from { top: 50%; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); }
+	to { top: -20px; -webkit-transform: translate(-50%, -100%); transform: translate(-50%, -100%); }
+}
+.slideOutUp { -webkit-animation-name: slideOutUp; animation-name: slideOutUp; }
+.dlg-modal.btr-form-hmodal {    min-height: 300px;    min-width: 320px;    display: flex;    flex-direction: column;    align-items: center;    justify-content: center; }
+
+/* Custom bitrix form */
+.registration .b24-form {
+	background-color: #1c1c1c;
+	width: 50%;
+	height: 555px;
+	display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.registration .b24-form .b24-form-style-classic {
+	--b24-background-color: rgb(28 28 28)!important;
+}
+.registration .b24-form .b24-form-wrapper.b24-form-border-bottom {
+    border-bottom: none;
+}
+.registration .b24-form {
+    font-size: 18px;
+}
+.registration .b24-form .b24-form-control-select-label, .registration .b24-form .b24-form-control-label {    
+    opacity: .6;
+    color: #ffffff;
+    color: rgb(255 255 255);
+}
+.registration .b24-form .b24-form-control-string .b24-form-control:focus, .registration .b24-form .b24-form-control-list .b24-form-control:focus, .registration .b24-form .b24-form-control-text .b24-form-control:focus, .registration .b24-form .b24-form-control-select .field-item:focus {
+    background-color: #161616;    
+    border-color: #323232;
+}
+.registration .b24-form .b24-form-control-string .b24-form-control, .registration .b24-form .b24-form-control-list .b24-form-control, .registration .b24-form .b24-form-control-text .b24-form-control, .registration .b24-form .b24-form-control-select .field-item {
+    border-radius: 0px;
+    border-bottom: 1px solid #292929;
+    background-color: rgb(28 28 28);
+	color: #ffffff;
+}
+.registration .b24-form .b24-form-btn:hover {
+	color: #ffffff;    
+    background-color: #5f5f5f;
+}
+.registration .b24-form .b24-form-btn {
+    position: relative;
+    display: inline-block;
+    padding: 15px 20px;
+    margin: 0;
+    min-height: 53px;
+    width: 100%;
+    border: 1px solid #5f5f5f;       
+    border-radius: 30px;
+    background-color: transparent;
+    font: 600 15px / 22px var(--b24-font-family);
+    -webkit-box-shadow: -1px -1px 1px rgba(0, 0, 0, .09);
+    box-shadow: -1px -1px 1px rgba(0, 0, 0, .09);
+    color: #5f5f5f;
+}
+.registration .b24-form .b24-form-control-desc {    
+    color: #ffffff;
+    line-height: 13px;
+}
+
+/* Bitrix FORM modal*/
+
+.dlg-modal .b24-form {
+	background-color: #1c1c1c;
+	width: 100%;
+	height: 555px;	
+}
+.dlg-modal .b24-form .b24-form-style-classic {
+	--b24-background-color: rgb(28 28 28)!important;
+}
+.dlg-modal .b24-form .b24-form-wrapper.b24-form-border-bottom {
+    border-bottom: none;
+}
+.dlg-modal .b24-form {
+    font-size: 18px;
+}
+.dlg-modal .b24-form .b24-form-control-select-label, .dlg-modal .b24-form .b24-form-control-label {    
+    opacity: .6;
+    color: #ffffff;
+    color: rgb(255 255 255);
+}
+.dlg-modal .b24-form .b24-form-control-string .b24-form-control:focus, .dlg-modal .b24-form .b24-form-control-list .b24-form-control:focus, .dlg-modal .b24-form .b24-form-control-text .b24-form-control:focus, .dlg-modal .b24-form .b24-form-control-select .field-item:focus {
+    background-color: #161616;    
+    border-color: #323232;
+}
+.dlg-modal .b24-form .b24-form-control-string .b24-form-control, .dlg-modal .b24-form .b24-form-control-list .b24-form-control, .dlg-modal .b24-form .b24-form-control-text .b24-form-control, .dlg-modal .b24-form .b24-form-control-select .field-item {
+    border-radius: 0px;
+    border-bottom: 1px solid #292929;
+    background-color: rgb(28 28 28);
+	color: #ffffff;
+}
+.dlg-modal .b24-form .b24-form-btn:hover {
+	color: #ffffff;    
+    background-color: #5f5f5f;
+}
+.dlg-modal .b24-form .b24-form-btn {
+    position: relative;
+    display: inline-block;
+    padding: 15px 20px;
+    margin: 0;
+    min-height: 53px;
+    width: 100%;
+    border: 1px solid #5f5f5f;       
+    border-radius: 30px;
+    background-color: transparent;
+    font: 600 15px / 22px var(--b24-font-family);
+    -webkit-box-shadow: -1px -1px 1px rgba(0, 0, 0, .09);
+    box-shadow: -1px -1px 1px rgba(0, 0, 0, .09);
+    color: #5f5f5f;
+}
+.dlg-modal .b24-form .b24-form-control-desc {    
+    color: #ffffff;
+    line-height: 13px;
+}
+
+/* Left nav panel */
+
+#scroll-navigation {
+	left: 15px;
+}
+
+#nav-dots {
+  position: fixed;
+  left: 15px;
+  top: 55%;
+  transform: translateY(-50%);
+  z-index: 9999;
+  flex-direction: column !important;
+  align-items: center;
+  gap: 8px!important;
+}
+#nav-dots .nav-dot {
+  width: 25px !important;
+  height: 2px !important;
+  border-radius: 0px;
+  background: #ADADAD;
+  opacity: 0;
+  cursor: pointer;
+  transition: opacity 0.2s, background 0.1s, transform 0.2s, filter 0.2s;
+  margin: 0 !important;
+  filter: blur(0.5px);
+  transform: translateY(20px);
+  pointer-events: none;
+}
+#nav-dots .nav-dot.visible {
+  opacity: 0.6;
+  transform: translateY(0);
+  filter: blur(0);
+  pointer-events: auto;
+}
+#nav-dots .nav-dot.active,
+#nav-dots .nav-dot:hover {
+  opacity: 1 !important;
+  background: #43DCA6 !important;
+  height: 4px !important;
+}
+#nav-dots.nav-dots--hidden {
+  display: none !important;
+}
+
+#nav-dots .nav-dot--delay-0 { transition-delay: 0ms; }
+#nav-dots .nav-dot--delay-1 { transition-delay: 30ms; }
+#nav-dots .nav-dot--delay-2 { transition-delay: 60ms; }
+#nav-dots .nav-dot--delay-3 { transition-delay: 90ms; }
+#nav-dots .nav-dot--delay-4 { transition-delay: 120ms; }
+#nav-dots .nav-dot--delay-5 { transition-delay: 150ms; }
+#nav-dots .nav-dot--delay-6 { transition-delay: 180ms; }
+#nav-dots .nav-dot--delay-7 { transition-delay: 210ms; }
+#nav-dots .nav-dot--delay-8 { transition-delay: 240ms; }
+#nav-dots .nav-dot--delay-9 { transition-delay: 270ms; }
+#nav-dots .nav-dot--delay-10 { transition-delay: 300ms; }
+#nav-dots .nav-dot--delay-11 { transition-delay: 330ms; }
+#nav-dots .nav-dot--delay-12 { transition-delay: 360ms; }
+#nav-dots .nav-dot--delay-13 { transition-delay: 390ms; }
+#nav-dots .nav-dot--delay-14 { transition-delay: 410ms; }
+#nav-dots .nav-dot--delay-15 { transition-delay: 450ms; }
+
+
+@media (max-width: 1024px) {
+  #nav-dots {
+    display: none !important;
+  }
+  #scroll-navigation {
+    display: none !important;
+  }
+  .registration .b24-form{    
+    width: 100%;
+  }
+}
+
+.promo-main-btn:hover {
+  background: #2f2f2f !important;  
+}
+
+.promo-main-btn:hover span {
+  color: #fff !important;
+  background-image: url(https://yolva-it.ru/wp-content/themes/yolva/assets/tpl-custom-template-leasing-new/section-link-arrow-light.svg)!important;
+  background-repeat: no-repeat !important;
+  transition: all 0s!important;
+}
+
+/* 1. section-link--white */
+.section-link.section-link--white:hover {
+  background: #fff!important;  
+}
+
+.section-link.section-link--white:hover span {
+  color: #000!important;  
+  background-image: url(https://yolva-it.ru/wp-content/themes/yolva/assets/tpl-custom-template-leasing-new/section-link-arrow-dark.svg)!important;
+  background-repeat: no-repeat !important;
+  transition: all 0s!important;
+}
+
+/* 2. section-link--dark */
+.section-link.section-link--dark:hover {
+  background: #2f2f2f !important;  
+}
+
+.section-link.section-link--dark:hover span {
+  color: #fff!important;  
+  background-image: url(https://yolva-it.ru/wp-content/themes/yolva/assets/tpl-custom-template-leasing-new/section-link-arrow-light.svg)!important;
+  background-repeat: no-repeat !important;
+  transition: all 0s!important;
+}
+
+.footer a:hover {
+  color: #43dca6;
 }
